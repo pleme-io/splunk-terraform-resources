@@ -1,0 +1,10 @@
+[provider]
+name = "splunk"
+version = "0.1.0"
+description = "Splunk Enterprise/Cloud platform"
+
+[provider.auth]
+url = { type = "String", required = true, env = "SPLUNK_URL" }
+username = { type = "String", required = true, env = "SPLUNK_USERNAME" }
+password = { type = "String", required = true, sensitive = true, env = "SPLUNK_PASSWORD" }
+insecure_skip_verify = { type = "Boolean", required = false, default = false }
